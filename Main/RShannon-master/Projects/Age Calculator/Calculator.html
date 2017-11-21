@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>The Age Calculator</title>
+		<script>
+		function tellAge() {
+var oform = document.forms['myform'];
+var birthYear = oform.elements['birthYear'].value;
+var futureDate = oform.elements['futureDate'].value;
+var newAge = futureDate - birthYear;
+var output="You will either be " + (newAge - 1) + " or " + newAge + " in the year " + futureDate + ".";
+	// var el = document.getElementbyId("myform");
+	alert(output);
+       //alert(el);
+       console.log(output);
+}
+		</script>
+	</head>
+	
+	<body><center>
+		<h1>The Age Calculator</h1><br />
+		
+		<h2>Find Out How Old You Will Be At A Future Date?</h2>
+	<div id="ac">
+     <p id="acq">Find Out How Old You Will Be At A Future Date?</p>
+         <form name='acform' id='myform'>
+           <p>What year were you born in? (format YYYY): <input type='text' name='fyear' id='birthYear' /> </p>
+           <p>Pick a year in the future (format YYYY): <input type='text' name='fdate' id='futureDate' /> </p>
+           <input type='button' name='submit' value='submit' onclick='tellAge();' />
+         </form>
+    </div>		
+		
+	</body>
+</html>
